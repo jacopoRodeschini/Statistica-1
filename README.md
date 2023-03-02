@@ -7,9 +7,9 @@ Moodle: Statistica cod. 22019 a.a. 2022-23 ([page](https://elearning15.unibg.it/
 
 
 ## How the exercise are organised
-The exercise session will be useful to understand how to solve the probability problems. The exercise cover all topic which are discussed during the course.  The same type of exercises will be proposed in the exams.
+The exercise session will be useful to understand how to solve probability problems. The exercises cover all topics which are discussed during the course.  The same type of exercises will be proposed in the exams.
 
-For the exercise we will use a R software, so could be useful to use during the lesson the personal PC with R software installed.
+For the exercises, we will use R software, so could be useful to use during the lesson a personal PC with R software installed.
 
 
 ## How to Install R (ubuntu OS)
@@ -28,7 +28,7 @@ $ sudo apt install r-base
 $ R
 ```
 
-Example of R session
+Example of the R session
 ```.R
 > 1 + 2
 [1] 3
@@ -43,7 +43,7 @@ Example of R session
 ### How to Install RStudio (ubuntu OS)
 Early developers preferred to run R via the command line console, succeeded by those who prefer an integrated development environment (IDE) like RStudio. Rstudio is available in two formats: RStudio Desktop is a regular desktop application while RStudio Server runs on a remote server and allows accessing RStudio using a web browser.
 
-To install Rstudio, go to the [downolad page](https://www.rstudio.com/products/rstudio/download/#download) and select correct version of IDE. 
+To install Rstudio, go to the [downolad page](https://www.rstudio.com/products/rstudio/download/#download) and select the correct version of IDE. 
 
 ```
 # Download the RStudio Packages
@@ -52,17 +52,17 @@ $ wget https://download1.rstudio.org/electron/bionic/amd64/rstudio-2022.12.0-353
 $ sudo apt intall rstudio-2022.12.0-353-amd64.deb
 ```
 
-Now we are able to open the Rstudio desktop app.
+Now we can open the Rstudio desktop app.
 
 ### Install R library
-R's capabilities are extended through user-created packages (or library), which offer statistical techniques, graphical devices, import/export, etc. These packages are easy to instal, in order to install library ppen RStudio and type this line. 
+R's capabilities are extended through user-created packages (or libraries), which offer statistical techniques, graphical devices, import/export, etc. These packages are easy to instal. To install libraries open RStudio and type this line. 
 
 ```.R
 # install.packages("packages_name") i.e.:
 install.packages(tidyverse) # install library
 install.packages("tidyverse", dependencies = TRUE )
 
-# use library in the script 
+# use the library in the script 
 library(tidyverse) # add library
 
 ```
@@ -70,11 +70,8 @@ library(tidyverse) # add library
 ## Structure of lesson
 > which topics are discussed:
 
-For the entire course we will use the following [dataset](https://elearning15.unibg.it/course/view.php?id=3877): HOSPITAL.CSV
+For the entire course, we will use the following [dataset](https://elearning15.unibg.it/course/view.php?id=3877): HOSPITAL.CSV
 
 - **Lesson 1:** 1) Brief introduction to T and RStudio; 2) Begin with R (the basic commands); 3) Load .csv files; 4) Read tables; 5) Explore variables and structure 6) IF / ELSE;
-
-
-
 
 
