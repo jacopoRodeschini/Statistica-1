@@ -72,6 +72,6 @@ library(tidyverse) # add library
 
 For the entire course, we will use the following [dataset](https://elearning15.unibg.it/course/view.php?id=3877): HOSPITAL.CSV
 
-- **Lesson 1:** 1) Brief introduction to T and RStudio; 2) Begin with R (the basic commands); 3) Load .csv files; 4) Read tables; 5) Explore variables and structure 6) IF / ELSE;
+- **Lesson 1:** 1) Brief introduction to R and RStudio; 2) Begin with R (the basic commands); 3) Load .csv files; 4) Read tables; 5) Explore variables and structure 6) IF / ELSE;
 
 
