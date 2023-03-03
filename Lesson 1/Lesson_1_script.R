@@ -7,25 +7,28 @@
 rm(list = ls()) # clear all environment variable
 graphics.off()  # close all plot
 
-
 ## Set the seed of the random number generator (for reproducibility)
 set.seed(1) 
 
 ## Set the working environment (env)
-# setwd('~../Esercitazioni/')
+# ... 
+
 
 ## Vector and matrix
-vec <- c(4, 5, 6)
-
+vec <- c(4.1, 5, 6)
 
 vec + 1         # add scalar
-vec <- vec + c(1,2,3)  # sum of two vectors
+vec <- vec + c(1,2,3)  # sum of two vectors (error) why?
+
+new_vec <- c(vec,1,2,3,4)
 
 max(vec)
 min(vec)
 sum(vec)
 
 vec[2]          # get the 2-position element
+vec[2] <- 10
+
 vec[c(2,3)]     # get the (2,3) position element
 vec[vec %% 2 == 0]
 
@@ -46,33 +49,43 @@ det(ey)
 
 colSums(ey)
 rowSums(ey)
+
 res <- eigen(ey)
 
 print(res$values)
 
-m <- matrix(rep(0,25),nrow = 5,ncol = 5)
+m <- matrix(rep(2,25),nrow = 25,ncol = 5)
 det(m)
 dim(m)
 
-inv
+m <- matrix(rep(c(1:5),25),nrow = 5,ncol = 25)
+
+m[3,1]
+index <- 12
+m[3,index]
 
 ## Missing values
 vec <- c(1,2, NA, 4, 5)
 vec[!(is.na(vec))]
 
-
 ## Data frame
-df <- data.frame(id = letters[1:10], x = 1:10, y = rnorm(10))
+df <- data.frame(id = letters[1:100] , x = 1:100, y = rnorm(100))
 
 sum(df$x)
 max(df$y)
 
-print(df$id)
+mean(df$y)
+print(var(df$y))
 
 dim(df)
-print(df)
-View(df)
+head(df)
 
+summary(df)
+
+## Merge data frame
+df_new <- data.frame(id = letters[1:24], b = factor(rnorm(24) > 0))
+
+df_merge <- merge(df,df_new,by = 'id')
 
 ## IF & ELSE
 if(df$y[2] > 0){
@@ -87,7 +100,6 @@ for (i in 1:10) {
   a <- a + i
 }
 print(a)
-
 
 ## Load .csv file
 # install tydyverse pacakges for more beatiful import
@@ -122,10 +134,27 @@ hist(hospital$Weight[sex],20)
 boxplot(hospital$Weight[sex],hospital$Weight[!sex])
 
 var(hospital$Weight)
+var(hospital$Weight[sex])
+
 sqrt(var(hospital$Weight))
 sd(hospital$Weight)
 
 cor(hospital$Age, hospital$Weight)
+
+
+## Homeworks: 
+# 1) How to invert a matrix? (Solution today) 
+
+# 2) Make a scatter plot (age,weight, g = sex)
+
+# 3) Import new Dataset (see the zenodo page of agrimonia)
+
+# 4) Based on the Agrimonia dataset build histogram/boxplot and compute the main descriptive statistics
+# (boxplot by season / boxplot by station etc etc)
+
+# bye
+
+
 
 
 
