@@ -12,13 +12,14 @@ set.seed(1)
 
 ## Set the working environment (env)
 # ... 
+setwd('./Documents/Dottorato/Esercitazioni_Materiale_Didattico/Statistica9CFU_Colombi/Esercitazioni/')
 
 
 ## Vector and matrix
 vec <- c(4.1, 5, 6)
 
 vec + 1         # add scalar
-vec <- vec + c(1,2,3)  # sum of two vectors (error) why?
+vec <- vec + c(1,2,3,4)  # sum of two vectors (error) why?
 
 new_vec <- c(vec,1,2,3,4)
 
@@ -27,12 +28,15 @@ min(vec)
 sum(vec)
 
 vec[2]          # get the 2-position element
-vec[2] <- 10
+vec[2] <- 100
 
 vec[c(2,3)]     # get the (2,3) position element
-vec[vec %% 2 == 0]
 
-vec2 <- seq(0.1, 0.1*3, by = 0.1)   # Create new vector
+inx <- vec %% 2 == 0
+inx <-vec >1
+vec[inx]
+
+vec2 <- seq(0.1, 3, by = 0.1)   # Create new vector
 
 vec * vec2        # Product
 
@@ -52,6 +56,8 @@ rowSums(ey)
 
 res <- eigen(ey)
 
+print("Hello word!")
+
 print(res$values)
 
 m <- matrix(rep(2,25),nrow = 25,ncol = 5)
@@ -66,7 +72,8 @@ m[3,index]
 
 ## Missing values
 vec <- c(1,2, NA, 4, 5)
-vec[!(is.na(vec))]
+
+data <- vec[!(is.na(vec))]
 
 ## Data frame
 df <- data.frame(id = letters[1:100] , x = 1:100, y = rnorm(100))
@@ -104,6 +111,7 @@ print(a)
 ## Load .csv file
 # install tydyverse pacakges for more beatiful import
 hospital <- read.csv("hospital.csv")
+# class(hospital)
 
 max(hospital$Weight)
 min(hospital$Weight)
@@ -116,7 +124,6 @@ summary(factor(hospital$Smoker))
 mean(hospital$Weight)
 mean(hospital$Weight[hospital$Smoker == 1])
 mean(hospital$Weight[hospital$Smoker == 0])
-
 
 ## Plot the data
 plot(hospital$Age,hospital$Weight)
@@ -141,7 +148,6 @@ sd(hospital$Weight)
 
 cor(hospital$Age, hospital$Weight)
 
-
 ## Homeworks: 
 # 1) How to invert a matrix? (Solution today) 
 
@@ -153,9 +159,3 @@ cor(hospital$Age, hospital$Weight)
 # (boxplot by season / boxplot by station etc etc)
 
 # bye
-
-
-
-
-
-
