@@ -74,7 +74,7 @@ points(x,dnorm(x,0,2),type="l",col="red")
 X = rnorm(1000, 2, 1)
 Y = rnorm(1000, 2, 2)
 mean(X + Y) # 2+2
-var(X + Y)  # 1+2^2
+var(X + Y)  # 1^2+2^2
 
 # ii)
 quantile(X,0.25)
@@ -83,7 +83,7 @@ quantile(X,0.75)
 quantile(X) 
 
 # iii)
-# F_X(b) - F_X(a)
+# P(-1 <= X <= 5) = F_X(b) - F_X(a)
 pnorm(5,2,1)- pnorm(-1,2,1)
 
 # R - Es. 3
@@ -100,7 +100,7 @@ hist(rexp(1000, 3))
 hist(rexp(1000, 9))
 hist(rexp(1000, 10))
 
-mean(rexp(1000, 2)) # 1 / lambda
+mean(rexp(100000, 2)) # 1 / lambda
 var(rexp(1000, 2)) # 1 / lambda^2
 
 
