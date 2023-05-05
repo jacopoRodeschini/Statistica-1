@@ -6,6 +6,7 @@ std = sqrt(6)
 
 #i) 
 pnorm(8,mean = mu,sd = std) - pnorm(2,mean = mu,sd = std)
+
 pnorm((8-mu)/std) - pnorm((2-mu)/std)
 
 #ii)
@@ -17,12 +18,15 @@ pnorm(3,mu,std)
 
 #iv)
 1 - pnorm(1,mu,std) + pnorm(-1,mu,std)
+1 - pnorm((1-mu)/std) + pnorm((-1 - mu)/std)
 
 
 ## Es. 3
-x = rnorm(1e3,3,2)
 alpha = 1/(2*qnorm(0.4) + 3)
-# alpha = 1/qnorm(0.4,3,2)
+
+alpha = 1/qnorm(0.4,3,2)
+
+x = rnorm(1e4,3,2)
 y = alpha*x
 hist(y)
 mean(y) # alpha*3
@@ -42,6 +46,7 @@ c = -2*qnorm(0.3)
 
 # check 
 pnorm(-c,0,2) + 1 - pnorm(c,0,2)
+
 1 - pnorm(c+5,5,2) + pnorm(-c+5,5,2)
 
 #Es. 5
@@ -52,7 +57,7 @@ sum(dpois(3:15,10))
 
 #Es. 6
 ps = pexp(12,rate=1/10)
-# 1 - exp(-12/10)
+1 - exp(-12/10)
 
 #i)
 dbinom(0,6,ps)
