@@ -16,9 +16,9 @@ ICpi = xm +c(+1, -1)*q1*sqrt(s2/n)
 #ii)
 q1 = (1/2 - xm)/sqrt(s2/n)
 g = 1 - pnorm(q1)
+
 #----------------------------------------
 # Es. 2
-
 n = 100
 uo = 170
 xm = 171
@@ -33,7 +33,7 @@ q1 = qt(alpha/2,n-1)
 #ii)
 q = qt(1 - alpha,n-1)
 T = (xm - uo)/(s/sqrt(n))
-# pValue = 1 - pt(T,n-1)
+pValue = 1 - pt(T,n-1)
 
 #----------------------------------------
 # Es. 3
@@ -59,7 +59,7 @@ n = 10
 xm = 113
 s2 = 98
 
-alpha = 0.01; #0.0012
+alpha = 0.001237217; #0.0012
 T = (xm-100)/(sqrt(s2/n))
 q1 = qt(1-alpha,n-1)
 pValue = 1 - pt(T,n-1)
@@ -131,6 +131,9 @@ ICu = xm + c(+1,-1)*q1*sqrt(s2/n)
 
 q1 = qt((1-g)/2,n-1)
 T = (xm - 11)/sqrt(s2/n)
+pValue = 2*pt(T,n-1)
+# oppure
+t.test(x,mu = 11, alternative = "two.sided",alpha = 0.05)
 
 #ii) Test(s2)
 alpha = 0.05
