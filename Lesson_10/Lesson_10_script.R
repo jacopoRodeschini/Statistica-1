@@ -35,6 +35,9 @@ g = 0.95
 q1 = qt((1-g)/2,dof)
 IC_b0 = b0 + c(+1,-1)*q1*std_b0
 
+T = 2.30
+pValue = 2*pt(-T,n-2)
+
 #iv: Test(b1)
 alpha = 0.05
 q1 = qt(alpha,dof)
@@ -75,7 +78,7 @@ yhat = predict(model,newdata = xnew)
 
 xbar = mean(x);
 xdev = sum((x - xbar)^2)
-sigma2_u = s2 *(1/n + (xbar-xnew$x[1])/xdev);
+sigma2_u = s2 *(1/n + (xbar-xnew$x[1])^2/xdev);
 
 g = 0.95
 q = qt((1-g)/2,n-2)
@@ -90,7 +93,7 @@ pValue = 1 - pt(T,n-2)
 #vi: IC previsione
 g = 0.95
 q = qt((1-g)/2,n-2)
-sigma2_yHat = s2 *( 1 + 1/n + (xbar-xnew$x[1])/xdev);
+sigma2_yHat = s2 *( 1 + 1/n + (xbar-xnew$x[1])^2/xdev);
 IC_yHat = yhat + c(+1,-1)*q*sqrt(1 + sigma2_yHat)
 
 # -------------------------------------------
@@ -154,7 +157,10 @@ xnew = data.frame(x = 40)
 yhat = predict(model,xnew)
 
 #iv 
-yhat = predict(model)
-Dres = sum((y - yhat)^2)
 Dtot = sum((y - mean(y))^2)
+
+xnew = data.frame(x = x)
+yhat = predict(model,xnew)
+
+Dres = sum((y - yhat)^2)
 r2 = 1 - Dres/Dtot
