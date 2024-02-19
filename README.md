@@ -2,18 +2,17 @@
 > Exercise session for the statistics I course (Prof. Colombi Roberto)
 
 Tutor: Jacopo Rodeschini (jacopo.rodeschini [at] unibg.it)
-Moodle: Statistica cod. 22019 a.a. 2022-23 ([page](https://elearning15.unibg.it/course/view.php?id=3877))
-
-
+Moodle: Statistica cod. 22019 a.a. 2022-24 ([page](https://elearning15.unibg.it/))
 
 ## How the exercise are organised
-The exercise session will be useful to understand how to solve probability problems. The exercises cover all topics which are discussed during the course.  The same type of exercises will be proposed in the exams.
+The exercise sessions will be useful to understand and solve probability and statistics problems. The exercises cover all topics discussed during the course.  The same type of exercises will be proposed in the exams.
 
-For the exercises, we will use R software, so could be useful to use during the lesson a personal PC with R software installed.
+The program is devised in two fundamental blocks. The first block covers probability computation and combinatoric calculus. The second block covers statistical inference, hypothesis testing and linear regression.  
 
+For the exercises, we will use R software, so it could be useful to use during the lesson a personal PC with R software installed.
 
 ## How to Install R (ubuntu OS)
-R is a programming language for statistical computing and graphics. R is used among data miners, bioinformaticians and statisticians for data analysis and developing statistical software. Users have created packages to augment the functions of the R language. Official documentation for R installation can be found at the following [link](https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html).
+R is a programming language for statistical computing and graphics. R is used among data miners, bioinformaticians and statisticians for data analysis and developing statistical software. Official documentation for R installation can be found at the following [link](https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html).
 
 ```.sh
 # Add the r-project repository. 
@@ -70,8 +69,20 @@ library(tidyverse) # add library
 ## Structure of lesson
 > which topics are discussed:
 
-For the entire course, we will use the following [dataset](https://elearning15.unibg.it/course/view.php?id=3877): HOSPITAL.CSV
+- **Lesson 1:** Combinatoric calculus and probability computation. 
+- **Lesson 2:** Combinatoric calculus and probability computation. 
+- **Lesson 3:** Random variable and probability distribution.
+- **Lesson 4:** Discrte random variable.
+- **Lesson 5:** Continuous random variable.
+- **Lesson 6:** Central limit theorem (CLT) & inference (mean and variance).
+- **Lesson 7:** Inference (mean, variance and probability).
+- **Lesson 8:** Hypothesis testing (p-value).
+- **Lesson 9:** Linear regression (OLS) and parameters inference.
+- **Lesson 10:** Linear regression (prediction, inference and coefficient of determination).
 
-- **Lesson 1:** 1) Brief introduction to R and RStudio; 2) Begin with R (the basic commands); 3) Load .csv files; 4) Read tables; 5) Explore variables and structure 6) IF / ELSE;
+ 
+
+
+
 
 
