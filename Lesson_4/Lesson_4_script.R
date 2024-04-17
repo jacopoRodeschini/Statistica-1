@@ -14,31 +14,20 @@ fx = lambda*exp(-lambda*d)
 plot(d,fx)
 
 # Es. 4
-si <- c(1:6, 5:1)
+x <- c(2:12)
+fx <- c(1:6, 5:1)/36
 
 # mean
-mu <- 0
-for (i in 2:12){
-  mu <- mu + i*si[i-1]/36
-}
+mu <- x %*% fx
 
 # variance
-va <- 0
-for (i in 2:12){
-  va <- va + (i^2)*si[i-1]/36
-}
-va <- va - mu^2
+va <- x^2 %*% fx - mu^2
 
 # F_x
-F_x <- c()
-for (i in 2:12){
-  F_x <- c(F_x,si[i-1]/36)
-}
-F_x = cumsum(F_x) 
+Fx = cumsum(fx) 
 
-plot(2:12,F_x)
+plot(2:12,Fx)
 abline(a = 0.4,b = 0)
-
 
 # Es. 8
 u <- runif(1e5,min = 0, max = 1) # hist(u)

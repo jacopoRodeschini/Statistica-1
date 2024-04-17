@@ -13,6 +13,7 @@ ICpi = pi - q * sqrt(s2/n)
 #ii)
 alpha = c(0.05, 0.01)
 q = qnorm(alpha)
+
 pi0 = 0.05
 T = (pi - pi0)/sqrt((pi0*(1 - pi0)/n))
 
