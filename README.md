@@ -79,6 +79,7 @@ library(tidyverse) # add library
 - **Lesson 8:** Hypothesis testing (p-value).
 - **Lesson 9:** Linear regression (OLS) and parameters inference.
 - **Lesson 10:** Linear regression (prediction, inference and coefficient of determination).
+- **Lesson 10:** Maximum Likelihood Estimation (MLE).
 
  
 
